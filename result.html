@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title></title>
+    <link rel="stylesheet" type="text/css" href="{{ url_for('static', filename='css/styles.css') }}">
+</head>
+<body>
+    
+	<header>
+		<div class="container">
+		<div id="brandname" style="color:rgb(); font-size: 30px; text-align: center;">
+			ML App
+		</div>
+		<h1 style="color:red;font-size: 40px;text-align: center;background-color: black;">Spam Detector For SMS Messages</h1>
+	</div>
+	</header>
+	<p style="color:blue;font-size:40px;text-align: center;text-underline-position:bottom;"><b>Results for the sentence</b></p>
+	<div class="results">
+
+		
+	{% if prediction == 1%}
+	<h2 style="color:red;font-size: 60px;font-style: italic;text-align: center; background-color: black">Spam</h2>
+	{% elif prediction == 0%}
+	<h2 style="color:blue;font-size: 60px;font-style: italic;text-align: center; background-color: black">
+		That text was not a spam luckily!
+	</h2>
+	{% endif %}
+
+	</div>
+
+</body>
+</html>
